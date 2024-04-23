@@ -3,7 +3,7 @@ i uploaded icon.png via thonny through files/upload to.
 there is a function to serve the manifest but could have possibly put an actual manifest.json but figured micropython is best left micro.
 
 added this into the html portion: 
-    "<link rel="manifest" href="/manifest.json">"
+    \\\<link rel="manifest" href="/manifest.json">)
 
 in the loop is if manifest.json... elif image... continue.
 
