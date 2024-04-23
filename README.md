@@ -1,6 +1,6 @@
 i uploaded icon.png via thonny through files/upload to.
 
-import ujson as json
+import ujson as json. could of just used ujson but already put json in the function and I'm lazy.
 
 there is a function to serve the manifest but could have possibly put an actual manifest.json but figured micropython is best left micro.
 
