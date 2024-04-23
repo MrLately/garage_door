@@ -20,9 +20,19 @@ def get_manifest_json():
     manifest = {
         "name": "Garage Door Controller",
         "short_name": "GarageDoor",
-        "display": "standalone"
+        "display": "standalone",
+        "theme_color": "#4A90E2",
+        "background_color": "#4A90E2",
+        "icons": [
+            {
+                "src": "icon.png",
+                "type": "image/png",
+                "sizes": "192x192"
+            }
+        ]
     }
     return json.dumps(manifest)
+
 
 html = """
 <!DOCTYPE html>
@@ -144,6 +154,13 @@ async def serve_client(reader, writer):
         manifest_data = get_manifest_json()
         writer.write('HTTP/1.0 200 OK\r\nContent-type: application/manifest+json\r\n\r\n')
         writer.write(manifest_data.encode())
+    elif '/icon.png' in request:
+        try:
+            with open('icon.png', 'rb') as f:
+                icon_data = f.read()
+            writer.write(b'HTTP/1.0 200 OK\r\nContent-Type: image/png\r\n\r\n' + icon_data)
+        except FileNotFoundError:
+            writer.write(b'HTTP/1.0 404 Not Found\r\n\r\n')
     else:
         cmd_up = request.find('DOOR=UP')
         cmd_down = request.find('DOOR=DOWN')
