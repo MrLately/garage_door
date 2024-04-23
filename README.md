@@ -1,5 +1,7 @@
 i uploaded icon.png via thonny through files/upload to.
 
+import ujson as json
+
 there is a function to serve the manifest but could have possibly put an actual manifest.json but figured micropython is best left micro.
 
 added this into the html portion: 
