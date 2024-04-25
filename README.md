@@ -20,7 +20,7 @@ Code Modifications:
 - The original script was modified to enhance functionality and user experience, including better HTML structure and additional PWA support.
 
 Acknowledgements:
-- Original script concept by Michael at Core Electronics. This version has been extended to include additional features and improvements for personal use and ease of integration into home automation systems.
+- Original script concept by Michael at Core Electronics. This version has been extended to include additional features and improvements for personal use and ease of integration into home automation systems. @ https://core-electronics.com.au/projects/wifi-garage-door-controller-with-raspberry-pi-pico-w-smart-home-project/
 
 Screenshots:
 - Below are some screenshots demonstrating the PWA in action, illustrating the interface and its features on a mobile device.
